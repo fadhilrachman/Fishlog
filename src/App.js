@@ -1,11 +1,16 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect
 } from 'react-router-dom';
+
+// routes
 import { AppRoutes } from './routes';
+
+// import layouts
+const DashboardLayout = lazy(() => import('./layouts/DashboardLayout'));
 
 function App() {
   return (
@@ -19,7 +24,13 @@ function App() {
                 key={path}
                 path={path}
                 exact={exact}
-                render={(props) => <Component {...props} />}
+                render={(props) => {
+                  return (
+                    <DashboardLayout>
+                      <Component {...props} />
+                    </DashboardLayout>
+                  );
+                }}
               />
             );
           })}
