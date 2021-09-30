@@ -7,6 +7,8 @@ import { Button } from '../../compontes/atoms';
 // assets
 import logo from '../../assets/images/logo.svg';
 
+// services
+
 import './styles.scss';
 
 const Welcome = () => {
