@@ -2,10 +2,10 @@ import React from 'react';
 import { useHistory } from 'react-router';
 
 // components
-import { Button } from '../../compontes/atoms';
+import { Button } from '~/components';
 
 // assets
-import logo from '../../assets/images/logo.svg';
+import logo from '~/assets/images/logo.svg';
 
 // services
 
